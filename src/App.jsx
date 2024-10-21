@@ -20,9 +20,6 @@ function App() {
           <option value="4">Много голямо одеяло</option>
         </select>
 
-        
-
-
     <div className="container">
 
        {yarnStock.map(item => (
