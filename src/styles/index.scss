@@ -50,9 +50,18 @@
                 text-decoration: underline;
             }
         }
-    
+    }
+}
+
+.knittypecontainer {
+    text-align: center;
+
+    label {
+        font-size: 5vw;
     }
 
-
-    
+    option:hover {
+        cursor: pointer;
+    }
 }
+

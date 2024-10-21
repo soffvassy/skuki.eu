@@ -36,4 +36,14 @@
   text-decoration: underline;
 }
 
+.knittypecontainer {
+  text-align: center;
+}
+.knittypecontainer label {
+  font-size: 5vw;
+}
+.knittypecontainer option:hover {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=index.css.map */

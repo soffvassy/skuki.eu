@@ -1,25 +1,26 @@
 import { useState, useEffect } from 'react'
 import './styles/index.css'
 import yarnData from "./yarnStock.json"
+import language from "./langBG.json"
 
 function App() {
   const [yarnStock, setYarnStock] = useState(yarnData);
   const [filteredData, setFilteredData] = useState([]);
   const [stock, setStock] = useState(1);
-  const imgPath ="/assets/images/";
+  const imgPath ="src/assets/images/";
 
   return (
     <>
-    
-      <label for="cars">Искам да изплета:</label>
-        <select onChange={(e)=>{setStock(e.target.value)}} name="cars" id="cars" form="carform">
-          <option value="1">Бебешко одеяло</option>
-          <option value="1">Шал</option>
-          <option value="2">Детско одеяло</option>
-          <option value="3">Голямо одеяло</option>
-          <option value="4">Много голямо одеяло</option>
-        </select>
-
+    <div className="knittypecontainer">
+    <label for="knittype">{language.knittypelabel}</label>
+        <div onClick={(e)=>{setStock(e.target.value); e.stopPropagation();}} name="knittype" id="knittype" form="knittypeform">
+          <option value="1">{language.knittypeoption1}</option>
+          <option value=".5">{language.knittypeoption2}</option>
+          <option value="2">{language.knittypeoption3}</option>
+          <option value="3">{language.knittypeoption4}</option>
+          <option value="4">{language.knittypeoption5}</option>
+        </div>
+        </div>
     <div className="container">
 
        {yarnStock.map(item => (
