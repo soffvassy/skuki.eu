@@ -1,8 +1,25 @@
 {
-        "knittypelabel":"Искам да изплета:",
-        "knittypeoption1":"Бебешко одеяло",
-        "knittypeoption2":"Шал",
-        "knittypeoption3":"Детско одеяло",
-        "knittypeoption4":"Голямо одеяло",
-        "knittypeoption5":"Много голямо одеяло"
+    "knittypeoptions": [
+        {
+            "value": "1",
+            "name": "Бебешко одеяло"
+        },
+        {
+            "value": ".5",
+            "name": "Шал"
+        },
+        {
+            "value": "2",
+            "name": "Детско одеяло"
+        },
+        {
+            "value": "3",
+            "name": "Голямо одеяло"
+        },
+        {
+            "value": "4",
+            "name": "Много голямо одеяло"
+        }
+    ],
+        "knittypelabel":"Искам да изплета:"
 }

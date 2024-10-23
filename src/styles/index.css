@@ -40,10 +40,44 @@
   text-align: center;
 }
 .knittypecontainer label {
-  font-size: 5vw;
+  font-size: 3vw;
 }
-.knittypecontainer option:hover {
+.knittypecontainer .option {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  position: relative;
+  border: 1px solid rgba(70, 111, 91, 0.1);
+  border-radius: 3px;
+}
+.knittypecontainer .option.selected {
+  background-color: rgba(70, 111, 91, 0.2);
+}
+.knittypecontainer .option.selected:after {
+  width: 100%;
+}
+.knittypecontainer .option:after {
+  left: 10px;
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(70, 111, 91, 0.1);
+  transition: width 0.5s ease;
+  border-radius: 3px;
+}
+.knittypecontainer .option:hover:after {
+  width: 100%;
+  transition: width 0.5s ease;
+}
+.knittypecontainer .option:hover {
   cursor: pointer;
+}
+
+.languagepicker {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */

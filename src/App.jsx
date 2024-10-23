@@ -1,30 +1,49 @@
 import { useState, useEffect } from 'react'
 import './styles/index.css'
 import yarnData from "./yarnStock.json"
-import language from "./langBG.json"
+import languageBG from "./langBG.json"
+import languageEN from "./langEN.json"
 
 function App() {
   const [yarnStock, setYarnStock] = useState(yarnData);
-  const [filteredData, setFilteredData] = useState([]);
+  const [chosenKnitType, setChosenKnitType] = useState([]);
   const [stock, setStock] = useState(1);
   const imgPath ="src/assets/images/";
+  const [language, setLanguage] = useState(languageBG);
+  const [search, setSearch] = useState('');
+
+  const handleKnitTypeOption = (value) => {
+    
+  }
 
   return (
     <>
+    <div onClick={()=>setLanguage(languageEN)} className="languagepicker">
+      EN
+    </div>
     <div className="knittypecontainer">
     <label for="knittype">{language.knittypelabel}</label>
-        <div onClick={(e)=>{setStock(e.target.value); e.stopPropagation();}} name="knittype" id="knittype" form="knittypeform">
-          <option value="1">{language.knittypeoption1}</option>
-          <option value=".5">{language.knittypeoption2}</option>
-          <option value="2">{language.knittypeoption3}</option>
-          <option value="3">{language.knittypeoption4}</option>
-          <option value="4">{language.knittypeoption5}</option>
+        <div onClick={(e)=>{
+                    const value = e.target.getAttribute('data-value'); // Retrieve the value
+                    setStock(value); // Set stock or perform other actions
+                    e.stopPropagation();}
+        } name="knittype" id="knittype" form="knittypeform">
+        {language.knittypeoptions.map(item=> (
+          <div className={"option " + (stock==item.value ? "selected" : "")} data-value={item.value}>{item.name}</div>
+        ))}
         </div>
-        </div>
+    </div>
+
+    <div className="search">
+      <input type="text"
+      value={search}
+      onChange={(e)=>setSearch(e.target.value)}></input>
+    </div>
+
     <div className="container">
 
        {yarnStock.map(item => (
-        item.stock>=stock ?  
+        item.stock>=stock && item.color.includes(search) ?  
         <figure key={item.id} className="product-container">
           <img
             src={imgPath + item.id + ".jpg"} 

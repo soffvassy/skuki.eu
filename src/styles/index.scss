@@ -57,11 +57,53 @@
     text-align: center;
 
     label {
-        font-size: 5vw;
+        font-size: 3vw;
     }
 
-    option:hover {
+    .option {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        position: relative;
+        border: 1px solid rgba(70, 111, 91, .1);
+        border-radius: 3px;
+
+        &.selected {
+            background-color: rgba(70, 111, 91, .2);
+                &:after {
+                    width: 100%;
+                }
+        }
+
+        &:after {
+            left: 10px;
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            background-color: rgba(70, 111, 91, 0.1);
+            transition: width .5s ease;
+            border-radius: 3px;
+        }
+
+        &:hover {
+            &:after {
+                width: 100%;
+                transition: width .5s ease;
+            }
+        }
+    }
+
+    .option:hover {
         cursor: pointer;
     }
 }
+
+.languagepicker {
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+}
+
+
 

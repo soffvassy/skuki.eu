@@ -1,0 +1,25 @@
+{
+    "knittypeoptions": [
+        {
+            "value": "1",
+            "name": "Baby blanket"
+        },
+        {
+            "value": ".5",
+            "name": "Scarf"
+        },
+        {
+            "value": "2",
+            "name": "Kids blanket"
+        },
+        {
+            "value": "3",
+            "name": "Large blanket"
+        },
+        {
+            "value": "4",
+            "name": "Extra large blanket"
+        }
+    ],
+        "knittypelabel":"I want to knit a:"
+}
