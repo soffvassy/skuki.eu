@@ -36,6 +36,7 @@ function App() {
 
     <div className="search">
       <input type="text"
+      placeholder={language.searchbycolor}
       value={search}
       onChange={(e)=>setSearch(e.target.value)}></input>
     </div>

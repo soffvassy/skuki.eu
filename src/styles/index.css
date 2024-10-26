@@ -80,4 +80,16 @@
   margin: 10px;
 }
 
+.search {
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.search input {
+  padding: 10px;
+  font-size: 30px;
+  border: 1px solid gold;
+  border-radius: 5px;
+}
+
 /*# sourceMappingURL=index.css.map */
