@@ -8,7 +8,7 @@ function App() {
   const [yarnStock, setYarnStock] = useState(yarnData);
   const [chosenKnitType, setChosenKnitType] = useState([]);
   const [stock, setStock] = useState(1);
-  const imgPath ="src/assets/images/";
+  const imgPath ="/assets/images/";
   const [language, setLanguage] = useState(languageBG);
   const [search, setSearch] = useState('');
 
